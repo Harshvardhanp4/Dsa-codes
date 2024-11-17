@@ -12,8 +12,17 @@ using namespace std;
         }
         return cnt;
     }
+//or we can do it like this too
+/*  int count (int n){
+int cnt= (int)log10(n)+1;
+return cnt;
+}
+*/
 
 int main(){
-    
-    cout<<"Hello World! ";
+        int n;
+        cout<<"Enter the no. ";
+        cin>>n;
+        cout<<"No. of digits printed are:"<<count(n);
+        return 0;
 }
