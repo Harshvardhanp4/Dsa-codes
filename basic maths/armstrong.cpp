@@ -1,24 +1,51 @@
-#include <bits/stdc++.h> 
+#include<bits/stdc++.h>
 using namespace std;
 
-bool isArmstrong(int num) {
-    int k = to_string(num).length();
-    int sum = 0;
-    int n = num;
-    while(n > 0) {
-        int ld = n % 10;
-        sum += pow(ld, k); 
-        n = n / 10;
+
+bool isArmstrong(int n){
+    int dup=n;
+    int sum=0;
+
+    while(n>0){
+        int ld=n%10;
+        sum=sum+(ld*ld*ld);
+        n=n/10;
+
     }
-    return sum == num;
+    if(sum==dup){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
-int main() {
-    int number = 153;
-    if (isArmstrong(number)) {
-        cout << number << " is an Armstrong number." << endl;
-    } else {
-        cout << number << " is not an Armstrong number." << endl;
+int main(){
+    int n;
+    cout<<"Enter the no. ";
+    cin>>n;
+
+    if(isArmstrong(n)){
+        cout<<n<<" is an armstrong number "<<endl;
+
     }
-    return 0;
+    else{
+        cout<<n<<" is not an Armstrong number"<<endl;
+
+        return 0;
+    }
 }
+
+//for looping we can write in place of else
+
+/*
+
+while(!is Armstrong(n)){
+cout<<n<<" is not an armstrong number pls try again!"
+cin>>n;
+}
+
+cout<<n<<"is an armstrong number!"<<endl;
+
+
+*/

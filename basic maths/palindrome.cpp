@@ -1,19 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-    
-    cout<<"Enter the no. ";
-    int n;
-    cin>>n;
-    int dup=n;
-    int revNum=0;
-    while(n>0){
-        int ld=n%10;
-        revNum=(revNum*10)+ld;
-        n=n/10;
-
+bool palindrome(int n)
+{
+    int revNum = 0;
+    int dup = n;
+    while (n > 0) {
+        int ld = n % 10;
+        revNum = (revNum * 10) + ld;
+        n = n / 10;
+    }
+    if (dup == revNum) {
+        return true;
+    } else {
+        return false;
+    }
 }
-    if(dup==revNum) cout<<"True this a palindrome";
-    else cout<<"False ";
+
+int main() {
+    int number;
+    cout<<"Enter the number: ";
+    cin>>number;
+
+    if (palindrome(number)) {
+        cout << number << " is a palindrome." << endl;
+    } else {
+        cout << number << " is not a palindrome." << endl;
+    }
+
+    return 0;
 }
