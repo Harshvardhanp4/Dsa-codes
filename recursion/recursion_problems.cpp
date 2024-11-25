@@ -63,22 +63,22 @@
 
 //print from 1 to n use backtrack (i.e:- not + use -)
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
-void name(int i,int n){
-    if(i<1){
-        return;//base case
-    }
-    name(i-1,n);
-    cout<<i<<endl;
+// void name(int i,int n){
+//     if(i<1){
+//         return;//base case
+//     }
+//     name(i-1,n);
+//     cout<<i<<endl;
     
 
-}
+// }
 
-int main(){
-    int n;
-    cout<<"Enter from where you want to be printed ";
-    cin>>n;
-    name(n,n);
-}
+// int main(){
+//     int n;
+//     cout<<"Enter from where you want to be printed ";
+//     cin>>n;
+//     name(n,n);
+// }
