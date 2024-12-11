@@ -25,5 +25,5 @@ int main(){
     cout<<fact(n);
 }
 
-//factorial of n
+
 
