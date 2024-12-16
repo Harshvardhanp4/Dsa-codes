@@ -97,6 +97,36 @@ for(int j=0;j<2*i+1;j++){
         cout<<endl;
     }
 }
+void pattern8(int n){
+  
+
+for(int i=0;i<n;i++){
+
+    //spaces
+    for(int j=0;j<i;j++){
+        cout<<".";
+    }
+
+
+    //stars
+    
+    for(int j=0;j<2*n-(2*i+1);j++){
+        cout<<"*";
+    }
+
+
+    //spaces
+     for(int j=0;j<i;j++){
+        cout<<".";
+    }
+    cout<<endl;
+
+}
+
+
+
+}
+
 int main(){
     int t;
     cout<<"How many times you want to print pattern: ";
@@ -104,7 +134,7 @@ int main(){
     for(int i=0;i<t;i++){
         int n;
         cin>>n;
-        pattern7(n);
+        pattern8(n);
 
     }
 }
