@@ -126,7 +126,19 @@ for(int i=0;i<n;i++){
 
 
 }
-
+void pattern9(int n){
+    //combine 7 & 8
+}
+void pattern10(int n){
+    for(int i=1;i<=2*n-1;i++){
+        int stars=i;
+        if(i>n)stars=2*n-i;
+        for(int j=1;j<=stars;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
 int main(){
     int t;
     cout<<"How many times you want to print pattern: ";
@@ -134,7 +146,7 @@ int main(){
     for(int i=0;i<t;i++){
         int n;
         cin>>n;
-        pattern8(n);
+        pattern10(n);
 
     }
 }
